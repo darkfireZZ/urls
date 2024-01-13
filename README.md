@@ -39,8 +39,14 @@ See [documentation](#documentation) for more information.
 
 ## Documentation
 
-The man page includes the full documentation of this program. It is included in
-this repository ([urls.1](./urls.1)).
+The man page ([urls.1](./urls.1)) includes the full documentation of this
+program. It can be viewed as follows:
+
+```
+git clone https://github.com/darkfirezz/urls
+cd urls
+man ./urls.1
+```
 
 ## Installation
 
