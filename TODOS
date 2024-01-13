@@ -1,0 +1,3 @@
+ - Add examples to README
+ - Add examples to manpage
+ - TODOs marked in the source code ("grep -r TODO *")
