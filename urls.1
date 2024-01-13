@@ -1,0 +1,45 @@
+.TH URLS 1 urls\-0.1.0
+.SH NAME
+urls \- print the URLs in files
+.SH SYNOPSIS
+.B urls
+[\fIOPTION\fR]... [\fIFILE\fR]...
+.SH DESCRIPTION
+.B urls
+extracts URLs from every FILE and writes them to standard output, separated by
+newlines.
+.PP
+With no FILE, or when FILE is -, read standard input.
+.PP
+A sequence of bytes is considered a URL if it consists of the following parts
+in that exact order:
+.TP
+1.
+A known URL scheme (the list of known schemes can be set with the --scheme
+option)
+.TP
+2.
+A colon (:)
+.TP
+3.
+1 or more valid URL characters
+.PP
+Furthermore, any URLs longer than 511 characters are ignored.
+.SH OPTIONS
+.TP
+\fB\-h, \-\-help\fR
+Display a short help message and exit
+.TP
+\fB\-s, \-\-schemes\fR \fISCHEME\fR
+Comma-separated list of schemes to extract.
+Default: "ftp,http,https,mailto,tel"
+.SH ERRORS
+If the program runs into an error, an error message will be printed to standard
+error and the program will immediately terminate with a non-zero exit code.
+.SH BUGS
+Should you encounter any problems, please submit an issue on the projects
+GitHub repository:
+.UR
+https://github.com/darkfireZZ/urls/issues
+.SH AUTHOR
+Written by Nicola Bruhin.
